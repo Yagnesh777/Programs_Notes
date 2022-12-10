@@ -1,0 +1,75 @@
+---JDBC is an API(predefined classes and interfaces) that allows java program to access DBMS
+
+---Here RDBMS is used. Eg. MySQL, Oracle, SQL Servers
+
+---We need to download the mysql connector .jar file inorder to establish the jdbc connection
+
+---There are 7 steps in JDBC connection
+
+(1) Import the package
+
+	-> Package used is 'java.sql.*'
+
+
+(2) Load and Register the Driver
+
+	-> Load : > Depends upon which type of dbms we are working with. We are using MySQL Driver
+		    > com.mysql.cj.jdbc.Driver
+		    > We require jar file for obtaining the driver which is available from mysql connector library. We need to download it from browser. Search 'mysql connector jar'
+
+	-> Register : 'forName()' method is used to load and register the driver. This method belongs to a class named 'Class'.
+
+	-> CODE === Class.forName("com.mysql.cj.jdbc.Driver");
+
+
+(3) Establish the connection
+	
+	-> Inorder to establish the connection we need to instantiate the interface called 'Connection'
+	-> We cannot directly instantiate the object of interface, so we call a method named 'getConnection'(static) which will give the object of interface 'Connection'
+	-> 'getConnection' takes 3 parameters namely url(of db), username, password
+	-> We need a class called 'DriverManager' to call the 'getConnection' method. As static method requires class name to call them.
+
+	-> CODE === Connection con = DriverManager.getConnection("url","username","password");
+
+
+(4) Create the Statement
+
+	-> Statement is also an interface. We need to create an object of statement as well.
+	-> There are 3 types of statement > Normal Satement : when we need to fetch the data from db
+						    > Prepared Satement : wwhen we need to insert the data into db
+						    > Callable Satement
+
+	-> CODE ===  Statement st = con.createStatement(); 
+
+
+(5) Execute the Query
+	
+	-> Execute the MySQL Query with the help of object of Statement and 'executeQuery()' method.
+	-> We need to store the obtained result, so we use 'ResultSet'(Interface) and its object 
+
+	-> CODE === ResultSet rs = st.executeQuery("MySQL Query eg. select * from Students(table)");
+	
+	
+
+(6) Process the Result
+
+	->  rs.next() is used to dislpay the result. In the beginning 'rs.next()' points to the row of attributes in a table. So we use while loop until all rows are displayed.
+	->  
+
+(7) Close the Statement and Connection
+
+	-> Get the object of Statement and Connection Interfaces to close
+	
+	-> st.close();
+	   con.close();
+
+
+---These steps are used to fetch the data from database
+
+---In SQL we have DDL statements: To create srtucture of database or table i.e to define
+			 DML statements: To perform insert, update, delete, modify operations on table i.e to manipulate
+			 DQL statements: To fetch the values from a database or table
+
+---Here executeQuery() is an DQL Statement.
+
+---To update table we can use 

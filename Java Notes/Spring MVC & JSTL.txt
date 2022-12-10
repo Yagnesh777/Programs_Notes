@@ -1,0 +1,18 @@
+JSP should always be used for view purpose only i.e frontend
+
+Servlets should always be used to write the business logic, as JSP takes time to get converted into a Servlet
+
+
+Question arises, why not use html to create frontend instead of JSP ?
+-> As html pages are static pages. Pages created in JSP are dynamic pages
+
+
+Difference between static and dynamic pages:
+-> In Facebook every user can see the same settings tab, but their news feeds are different based on their watch history.
+-> Here settings become static page and news feed becomes dynamic page.
+
+
+-----------------------------------------------------  JSTL  ------------------------------------------------------------
+
+JSTL - JSP Standard Tag Library
+

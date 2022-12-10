@@ -1,0 +1,170 @@
+
+
+*********************************************************************   SERVLETS   ***********************************************************************
+
+
+
+-> There's a request(dynamic request) and response between a client and server. The helper application (web container) contains servlets which helps the 
+	server to process a valid response to the client.
+
+
+-> We use "tomcat" as a web container. It allows the user to run 'Servlet' and 'Java Server Pages(JSP)' that are based on web applications.
+
+
+-> To achieve a dynamic web page we need to install tomcat
+
+
+-> A Servlet is a java file which can take the request from the client, process it and provides response in the format of html page.
+
+
+-> Every request has a servlet as a response. 
+
+
+-> "Deployment Descriptor" a web.xml file helps in processing servlet for that particular request, i.e for which request what servlet should be an response.
+
+
+-> The response provided is in the form of dynamic html page.
+
+
+-> JAVA has "annotations" (@WebServlet) which works as replacement for "Deployment Descriptor" a web.xml.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SERVLET THEORY
+
+
+-> A servlet is basically an API with which we can develop web applications.
+
+
+-> doPost(), doGet()
+
+-> Other than service() HttpServlet class has 2 more methods: doGet, doPost
+-> Inorder for the servlet to work only with post method use 'doPost()' instead of service(). 
+-> NOTE: doPost works through the service()
+
+
+-> HttpServLetRequest/Response Object
+
+-> HttpServLetRequest and HttpServLetResponse are interfaces
+-> We don't need to create object of these interfaces, tomcat server creares
+-> Request Obj: Stores data/values given by the client. It travels from client to server( or servlet in this case).
+-> Response Obj:	It stores the information(of type html, text, video) sent by the servlet to the client.
+
+
+-> Query String
+
+-> using this we can send the data entered by the client to the server. The url on the search bar is called query string.
+-> Whenever we want to submit data to the server we use 'post' request, whenever we want to fetch the data from the server we use 'get' request.
+
+
+
+CALLING A SERVLET FROM OTHER SERVLET
+
+(1) RequestDispatcher:
+
+-> Calling a servlet from another servlet is possible using 'RequestDispatcher' an interface.
+-> Among the 2 servlets, 'RD' just sends data from servlet1 to servlet2 using the same request object. The url shown in address bar is still of servlet1
+-> It is possible only if the servlet from which we are calling should not be displaying any output on the browser. 
+-> So that the called servlet displays its output.
+
+
+(2) sendRedirect():
+
+-> Calling a servlet from another servlet is also possible using 'sendRedirect()' i.e redirecting.
+-> Among 2 servlets, 'SD' redirects the client from servlet1 to servlet2(here 2 diff req obj for 2 srvlets). Thw url shown in address bar is now of servlet2
+-> Here URL rewriting is taking place
+-> sendRedirect() works only with doGet() irrespective of the method in html page form or main servlet
+-> Here the doGet() is of called servlet
+
+-> In RequestDispatcher the client doesn't known from where the response is coming from, either main servlet or the another servlet(which is called).
+	In RequestDispatcher client doesn't knowns it is being redirected.
+-> In sendRedirect() client knows it is being redirected from 1 to other servlet
+
+
+
+SESSION MANAGEMENT
+
+-> To share data between different servlets we use concept of Session Management
+-> Inorder to maintain the data throughout the session i.e data travelling from servlets to servlets, we use session management
+
+-> 3 ways available:	a) HttpSession	b) Cookie	c) Normal Session(demo in first servlet prog)
+
+	a) HttpSession: 	-> Data is obtained from main servlet to be called in called servlet directly.
+				-> HttpSession object is given by tomcat, need not to create it.
+
+	b) Cookie: 	-> Data in the form of cookies obtained from main servlet -> sent to client -> client sends it to the called servlet
+			-> Same with the cookie object
+
+
+NOTE:------------------
+
+req.getParameter(): used for getting data from html page to servlet, servlet to servlet(redirecting)
+
+setAttribute()/
+getAttribute(): used for getting/setting data from servlet to servlet(dispatching), servlet to servlet(session(we use sendRedirect in this also, to just avoid url rewriting which is taking place in sendRedirect))
+
+
+ServletConfig & ServletContext ----------------------------
+
+-> Both are interfaces
+-> not understood
+
+
+
+=====================================================================  JSP  =============================================================================
+
+-> JSP stands for Java Server Pages
+
+Why do we need JSP?
+
+-> Using JSP file we can write java code in html tags.
+-> Instead of Servlet, JSP is used to write the java code. It is much simple to code in JSP than Java Servlet(a class)
+
+
+So why do we use Servlets ?
+
+-> Tomcat a web container cannot run JSP pages. It can only run Servlets, therfore it converts JSP files to servlets.
+
+
+-> The objects in JSP file are given by tomcat and are called implicit objects.
+-> Eg. 'pageContext' object is used to set and get the value(just like session management).
+-> The scope of pageContext remains local ie. it can be used only in the same page. Inorder to make it global 'PageContext.SESSION_SCOPE' is used
+
+
+-> Tags in JSP:	a) Scriptlet Tag	 (<%  %>):		Code block goes inside service() in Servlet Class
+			b) Declaration Tag (<%!  %>):		Used to declare variables, methods inside the Servlet Class but outside of service()
+			c) Directive Tag	 (<%@ page  %>):	Used to write package import statements which is written outside of Servlet Class
+			d) Expression Tag	 (<%=  %>):		Used to write the print statements.
+			e) Comment Tag	 (<%--  --%>)
+
+
+-> JSP Directive:	1. @page:	 used in importing package, Handling exception, extending(inheriting) class
+			2. @include: used to include/use another JSP file to the current JSP file
+			3. @taglib:  used to use external tags in JSP file
+
+
+-> Exception Handling in JSP page is done by '@page directive' by specifying an errorPage(separate jsp file) to catch the exception.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

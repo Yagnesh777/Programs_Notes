@@ -1,0 +1,288 @@
+Contents in JAVA:
+
+• Declarations and Access Control ----------------------------------
+
+o Identifiers & JavaBeans 
+o Legal Identifiers 
+o Sun's Java Code Conventions 
+o JavaBeans Standards 
+o Declare Classes 
+o Source File Declaration Rules 
+o Class Declarations and Modifiers 
+o Concrete Subclass 
+o Declaring an Interface 
+o Declaring Interface Constants 
+o Declare Class Members 
+o Access Modifiers 
+o Nonaccess Member Modifiers 
+o Constructor Declarations 
+o Variable Declarations 
+o Declaring Enums 
+
+
+
+• Object Orientation  -----------------------------
+
+o Encapsulation 
+o Inheritance, Is-A, Has-A 
+o Polymorphism 
+o Overridden Methods 
+o Overloaded Methods 
+o Reference Variable Casting
+o Implementing an Interface
+o Legal Return Types 
+o Return Type Declarations
+o Returning a Value 
+o Constructors and Instantiation
+o Default Constructor
+o Overloaded Constructors
+o Statics 
+o Static Variables and Methods 
+o Coupling and Cohesion 
+
+
+
+• Assignments ----------------------------------
+
+o Stack and Heap—Quick Review 
+o Literals, Assignments, and Variables
+o Literal Values for All Primitive Types
+o Assignment Operators
+o Casting Primitives 
+o Using a Variable or Array Element That Is Uninitialized and Unassigned 
+o Local (Stack, Automatic) Primitives and Objects
+o Passing Variables into Methods
+o Passing Object Reference Variables
+o Does Java Use Pass-By-Value Semantics? 
+o Passing Primitive Variables 
+o Array Declaration, Construction, and Initialization
+o Declaring an Array
+o Constructing an Array
+o Initializing an Array 
+o Initialization Blocks 
+o Using Wrapper Classes and Boxing 
+o An Overview of the Wrapper Classes ----
+o Creating Wrapper Objects 
+o Using Wrapper Conversion Utilities 
+o Autoboxing -----
+o Overloading 
+o Garbage Collection ------
+o Overview of Memory Management and Garbage Collection 
+o Overview of Java's Garbage Collector
+o Writing Code That Explicitly Makes Objects Eligible for Garbage Collection 
+
+
+
+• Operators -------------------------------
+ 
+o Java Operators 
+o Assignment Operators
+o Relational Operators 
+o instanceof Comparison 
+o Arithmetic Operators 
+o Conditional Operator 
+o Logical Operators 
+
+
+
+• Flow Control, Exceptions -------------------------------------------
+
+o if and switch Statements 
+o if-else Branching 
+o switch Statements 
+o Loops and Iterators 
+o Using while Loops 
+o Using do Loops 
+o Using for Loops
+o Using break and continue 
+o Unlabeled Statements 
+o Labeled Statements 
+o Handling Exceptions 
+o Catching an Exception Using try and catch
+o Using finally 
+o Propagating Uncaught Exceptions 
+o Defining Exceptions 
+o Exception Hierarchy
+o Handling an Entire Class Hierarchy of Exceptions 
+o Exception Matching 
+o Exception Declaration and the Public Interface 
+o Rethrowing the Same Exception 
+o Common Exceptions and Errors
+
+
+
+• Gradle Fundamentals ------------------------------
+
+o Introduction
+o Folder Structure
+o Install and Setup Gradle on Windows
+o Dependencies in Build Scripts
+o Gradle Wrapper
+o Lifecycle Tasks: The Base Plug In
+o Using Project Info and the check command
+o Creating Variables and external properties
+o Creating a Build Scan
+o Dependencies
+
+
+
+• TDD with Junit 5 ----------------------------------
+
+o Types of Tests
+o Why Unit Tests Are Important
+o What's JUnit?
+o JUnit 5 Architecture
+o IDEs and Build Tool Support
+o Setting up JUnit with Maven
+o Lifecycle Methods
+o Test Hierarchies
+o Assertions
+o Disabling Tests
+o Assumptions
+o Test Interfaces and Default Methods
+o Repeating Tests
+o Dynamic Tests
+o Parameterized Tests
+o Argument Sources
+o Argument Conversion
+o What Is TDD?
+o History of TDD
+o Why Practice TDD?
+o Types of Testing
+o Testing Frameworks and Tools
+o Testing Concepts
+o Insights from Testing
+o Mocking Concepts
+o Mockito Overview
+o Mockito Demo
+o Creating Mock Instances
+o Stubbing Method Calls
+
+
+
+• Strings, I/O, Formatting, and Parsing -----------------------------------
+
+o String, StringBuilder, and StringBuffer -----
+o The String Class ----
+o Important Facts About Strings and Memory
+o Important Methods in the String Class 
+o The StringBuffer and StringBuilder Classes
+o Important Methods in the StringBuffer and StringBuilder Classes
+o File Navigation and I/O
+o Types of Streams ----
+o The Byte-stream I/O hierarchy 
+o Character Stream Hierarchy 
+o RandomAccessFile class
+o The java.io.Console Class
+o Serialization ----
+o Dates, Numbers, and Currency
+o Working with Dates, Numbers, and Currencies
+o Parsing, Tokenizing, and Formatting
+o Locating Data via Pattern Matching
+o Tokenizing
+
+
+
+• Generics and Collections -------------------------------------
+
+o Overriding hashCode() and equals()
+o Overriding equals()
+o Overriding hashCode()
+o Collections
+o So What Do You Do with a Collection?
+o List Interface
+o Set Interface
+o Map Interface
+o Queue Interface
+o Using the Collections Framework
+o ArrayList Basics
+o Autoboxing with Collections
+o Sorting Collections and Arrays
+o Navigating (Searching) TreeSets and TreeMaps
+o Other Navigation Methods
+o Backed Collections
+o Generic Types
+o Generics and Legacy Code
+o Mixing Generic and Non-generic Collections
+o Polymorphism and Generics
+
+
+
+• Threads ----------------------------------------
+
+o Defining, Instantiating, and Starting Threads
+o Defining a Thread
+o Instantiating a Thread
+o Starting a Thread
+o Thread States and Transitions
+o Thread States
+o Preventing Thread Execution
+o Sleeping
+o Thread Priorities and yield( )
+o Synchronizing Code
+o Synchronization and Locks
+o Thread Deadlock
+o Thread Interaction
+o Using notifyAll( ) When Many Threads May Be Waiting
+
+
+
+• Concurrent Patterns in Java -----------------------------------
+
+o Introducing Executors, What Is Wrong with the Runnable Pattern?
+o Defining the Executor Pattern: A New Pattern to Launch Threads
+o Defining the Executor Service Pattern, a First Simple Example
+o Comparing the Runnable and the Executor Service Patterns
+o Understanding the Waiting Queue of the Executor Service
+o Wrapping-up the Executor Service Pattern
+o From Runnable to Callable: What Is Wrong with Runnables?
+o Defining a New Model for Tasks That Return Objects
+o Introducing the Callable Interface to Model Tasks
+o Introducing the Future Object to Transmit Objects Between Threads
+o Wrapping-up Callables and Futures, Handling Exceptions
+
+
+
+• Concurrent Collections -------------------------------------
+
+o Implementing Concurrency at the API Level
+o Hierarchy of Collection and Map, Concurrent Interfaces
+o What Does It Mean for an Interface to Be Concurrent?
+o Why You Should Avoid Vectors and Stacks
+o Understanding Copy On Write Arrays
+o Introducing Queue and Deque, and Their Implementations
+o Understanding How Queue Works in a Concurrent Environment
+o Adding Elements to a Queue That Is Full: How Can It Fail?
+o Understanding Error Handling in Queue and Deque
+o Introducing Concurrent Maps and Their Implementations
+o Atomic Operations Defined by the ConcurrentMap Interface
+o Understanding Concurrency for a HashMap
+o Understanding the Structure of the ConcurrentHashMap from Java 7
+o Introducing the Java 8 ConcurrentHashMap and Its Parallel Methods
+o Parallel Search on a Java 8 ConcurrentHashMap
+o Parallel Map / Reduce on a Java 8 ConcurrentHashMap
+o Parallel ForEach on a Java 8 ConcurrentHashMap
+o Creating a Concurrent Set on a Java 8 ConcurrentHashMap
+o Introducing Skip Lists to Implement ConcurrentMap
+o Understanding How Linked Lists Can Be Improved by Skip Lists
+o How to Make a Skip List Concurrent Without Synchronization
+
+
+
+• Lambda Expressions -----------------------------
+
+o Introduction
+o Writing Lambda Expressions
+o Functional Interfaces
+o Types of Functional Interfaces
+o Method reference
+
+
+
+• Stream API ----------------------------------
+
+o Introduction ----
+o Stream API with Collections
+o Stream Operations
+
+

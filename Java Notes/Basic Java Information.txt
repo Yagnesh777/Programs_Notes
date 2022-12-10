@@ -1,0 +1,44 @@
+
+  ----------- Java Learning Path -----------------
+  
+ -> 3 fields where is Java used as main.
+ 
+ a) Android Developer
+ ---------------------
+ -> Java/Kotlin, XML
+ 
+ 
+ 
+ b) Enterprise Market
+ ---------------------
+ Java Developer:
+
+A] Backend
+ -> core Java, Database(Relational Database/ NoSQL) Servlet JSP, XML, Spring MVC
+ -> There are different types of spring framework 
+ -> Also need to learn cloud(Pivotal Cloud Foundry, AWS) for deploying our project means program 
+
+B] Frontend
+ -> HTML, CSS, JS, React.js(JS Framework)
+
+ 
+ 
+ c) Big Data
+ ------------
+ -> Core Java, Hadoop/ApacheSpark
+ 
+ 
+ ----------------- Important Terms in Java ----------------------
+ 
+IDEs for JAVA - NetBeans, Eclipse, IntelliJ
+
+Why use eclipse?  Because it is free and used industry-wide
+
+ 1) IDE:
+	-> Integrated Development Environment
+	-> Eclipse IDE is used to WRITE, COMPILE, RUN in a single.
+	
+	Source File(Which we have written)  =>  compiled to  =>  byte code  =>  which runs in  =>  JVM(Java virtual Machine) 
+	
+	-> Java is platform independent, So it requires JVM to run the compiled byte code.
+

@@ -1,0 +1,9 @@
+-> this keyword is a reference variable that refers to the current object of a class
+
+	eg. obj.num == this.num
+
+-> It is used to reference instance data fields(variables) and instance methods
+
+-> It is used to call the default constructor of its own class in another constructor of the same class
+
+-> Similarly, we can call the parameterized constructor when default constructor is created/called

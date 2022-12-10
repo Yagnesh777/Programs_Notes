@@ -1,0 +1,41 @@
+Difference between Thread Class & Runnable Interface
+
+Thread: -> Class extending Thread class cannot extend other class
+	  -> Enables tight coupling
+	  -> Extended only if there is a need of overriding other methods of it
+
+
+Runnable:	-> Class implementing Runnable can implement any other Interface
+		-> Enables loose coupling
+		-> Implemented only if there is a nedd of special run()
+
+
+Demon threads:	-> Thread that is executed along with the main thread
+			-> JVM starts executing demon thread along with main thread (concurrently)
+
+
+
+-----------------------------------  Multi Threading ----------------------------------------------
+
+
+Multi Threading:	-> Multi Threading is the ability of a program to run 2 or more threads concurrently, where each thread handles a different task at the same
+				time.
+
+SYNCHRONIZED:	-> When 1 thread is using the task method, synchronized keyword will create a lock so that no other thread can access that method.
+		  	-> Which helps in sequential execution of threads
+			-> Is helpful when We have multiple threads working on the same task class object i.e 1 task method is used by multiple threads 
+
+
+
+isAlive() :	-> Determines if a thread is running or not
+
+join():	-> It allows the thread to complete first before any other threads or statements. Disallowing parallel running.
+
+setName():	-> Sets a name for the thread.	
+getName():	-> Gets name
+
+setPriority():	-> Sets priority for a thread.(1 is least, 10 is top)	
+getPriority(): -> Gets priority
+
+currentThread():	-> Defines the current thread
+

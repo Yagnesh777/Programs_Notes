@@ -1,0 +1,180 @@
+
+-----------------------------------------[ DATA STRUCTURE ]-------------------------------------------------------
+
+-> A way of storing data in an efficient way in the memory
+
+-> Efficient way:   a)Time Complexity   b)Space Complexity (It comes under data structure and algorithms)
+
+
+-> Types of Data Structure:	1) Primitive DS	boolean
+								char
+								byte,short,int,long
+								double,float
+
+					2) Non-primitive DS	a) Linear DS	String
+												Array
+												List (ArrayList,LinkedList),Set (HashSet,LinkedHashSet),Queue
+												
+
+									b) N0n-linear DS	Graph
+												Trees
+
+
+									
+----------------------------------------[ COLLECTION FRAMEWORK ]--------------------------------------------------
+
+
+-> Collection Framework is an API for non-primitive data structure( excluding String, Array) containing predefined classes and interfaces
+
+-> Collection is a root interface (present in java.util package) of all the collection objects.
+
+-> Object of a class(in collection package/interface) is called Collection Object
+
+-> Framework represents library with predefined interfaces, classes and methods.
+
+-> Collections is a utility class present in java.util package that contains only static methods to perform certain operations on 'Collection Object'.
+
+
+
+
+-> Why do we need collection when we have array? Differences are
+
+ARRAY:	1) Can store only homogenous types of data. 
+		2) Size is fixed in an Array. Cannot increase or decrease the size at runtime
+		3) In array we have to develop algorithms for sorting, searching, selecting, updation, deletion of an element/s
+		
+
+COLLECTION: 1) Can store heterogenous types of data in single entity except in PriorityQueue(C) entity.
+		2) Size can be increased or decreased in collections at runtime
+		3) In Collection Framework, We have predefined classes and methods for sorting, searching, selecting, updation, deletion of an element/s
+
+
+
+-> Collection Framework contains 2 parts:
+	
+	1) java.util.Collection:  In collection data is stored directly
+	2) java.util.Map:  In Map data is stored in key:value pair
+
+
+
+
+--------------------------------------[ HIERARCHY IN COLLECTION ]------------------------------------------
+
+
+I=Interface | C=Class | LC=Legacy Class | *=important
+
+Collection(I) 	--------------- List(I) -------------- ArrayList(C)*, LinkedList(C)*
+
+							-------------- Stack(LC), Vector(LC)
+
+			
+
+				
+			--------------- Set(I) 	--------------- HashSet(C)*, LinkedHashSet(C)*
+
+							--------------- SortedSet(I), NavigateSet(I), TreeSet(C)
+
+
+
+
+			--------------- Queue(I)--------------- PriorityQueue(C)*
+
+							--------------- Dequeue(I), ArrayQueue(C)
+
+
+
+
+(1) List:	-> Insertion order is preserved(i.e elements in the way we inserted)
+		-> Duplicate data is allowed.
+		-> Can add null values in ArrayList(C)*, LinkedList(C)*
+
+		When to use what?
+		ArrayList: 	-> It used mostly for retrieving/reading the elements (with) the help of index no. 
+				-> Not preferred for insertion/deletion because 1 insertion/deletion changes the index no. of whole sequence. The process which 
+					takes time(shifting)
+
+		LinkedList: -> There is no shifting taking place because it just adds a new node. Therefore mostly used for insertion/deletion.
+				-> Not preferred for retrieval because LinkedList finds the given element from the beginning of sequence due to node concept
+
+NOTE: LinkedList implements List(I) as well as Queue(I)
+
+
+(2) Set:	-> Insertion order is not preserved except 'LinkedHashSet'
+		-> Duplicate data is not allowed.
+		-> Can add null values in HashSet(C)*, LinkedHashSet(C)*
+
+		When to use what?
+		HashSet:	-> Used for searching, as searching is faster due to hashcode concept.
+
+		LinkedHashSet: -> Same as HashSet, but Insertion order is preserved. Combo of LinkedList and HashSet
+
+
+(3) Queue:	-> Insertion order is preserved
+		-> Duplicate data is allowed
+		-> When the entity is Prior to Processing we must use Queue
+		-> Follows FIFO concept
+		
+		PriorityQueue: -> Heterogeneous data is not allowed
+
+
+
+
+
+----------------------------------------[ HIERARCHY IN MAP ]---------------------------------------------
+
+
+
+Map(I)------------------ HashMap(C)*, HashTable(C)*
+
+	------------------ IdentityHashMap(C)
+
+	------------------ WeakHashMap(C)
+
+	------------------ SortedMap(I), NavigableMap(I), TreeMap(C)
+
+	------------------ LinkedHashMap(C), Properties(C), Dictionary(C)
+
+
+
+
+Map:	-> Insertion order is not preserved
+	-> Keys cannot be duplicate, but values can be duplicate
+	-> Map is a collection of entries (1 entry = key:value)
+
+NOTE: Map(I) extends Entry(I) which is used by HashMap(C) & Hashtable(C) for performing operations on entries
+	
+
+(1) HashMap: -> Entries are stored in sorted order(ASCENDING)
+		 -> Null key is allowed once, null values can be multiple
+		 -> Performance is faster like 'HashSet' due to hashcode concept
+		 -> Multiple threads are allowed at a time
+
+
+(2) Hashtable:	-> Entries are stored in sorted order(DESCENDING)
+			-> No null values or key are allowed
+			-> 1 thread allowed at a time, Therefore performance is slower than HashMap
+
+
+
+-----------------------------------------------------------------------------------------------------------
+
+
+-> Object of a class(in collection package/interface) is called Collection Object. Similarly with Map Object
+
+-> We cannot create object of Interfaces, but can create reference variable of Interfaces
+	
+	* ArrayList obj = new ArrayList();  correct, since class
+	* List obj = new List();            incorrect, since interface
+	* List obj = new ArrayList();       correct, since ArrayList implements List
+
+-> Every Collection Object that operates on 'HASHCODE' concept has a term load-factor/ fill-ratio = 0.75.
+
+
+
+
+
+
+
+
+
+
