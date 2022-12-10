@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  
+  <servlet>
+  	<servlet-name>one</servlet-name>
+  	<servlet-class>com.test.TextDisplay1</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>one</servlet-name>
+  	<url-pattern>/1</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+  	<servlet-name>two</servlet-name>
+  	<servlet-class>com.test.TextDisplay2</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>two</servlet-name>
+  	<url-pattern>/2</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+  	<servlet-name>three</servlet-name>
+  	<servlet-class>com.test.TextDisplay3</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>three</servlet-name>
+  	<url-pattern>/3</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+  	<servlet-name>four</servlet-name>
+  	<servlet-class>com.test.TextDisplay4</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>four</servlet-name>
+  	<url-pattern>/4</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+  	<servlet-name>five</servlet-name>
+  	<servlet-class>com.test.TextDisplay5</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>five</servlet-name>
+  	<url-pattern>/5</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
