@@ -28,11 +28,11 @@ public class TextDisplay1 extends HttpServlet {
 		
 		//-------calling, and also sending data from this servlet using RD
 //		req.setAttribute("str",str);
-//		RequestDispatcher rd = req.getRequestDispatcher("2");
+//		RequestDispatcher rd = req.getRequestDispatcher("file name(jsp/servlet)");
 //		rd.forward(req,res);
 		
 		//-------just calling another servlet using SR
-//		res.sendRedirect("3");
+//		res.sendRedirect("file name(jsp/servlet)");
 		
 		//-------calling, and also sending data from this servlet using SR
 		//this is url rewriting
