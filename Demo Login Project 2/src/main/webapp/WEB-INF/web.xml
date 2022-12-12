@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Demo Login Project 2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 
+  Flow of the Login Project 
+ 
+	1) User registers
+	2) If successful then drop a message and stay in the same sign-up page. If unsuccessful then just stay at the 
+		page
+	3) After sign-up success, from sign-up page click on 'already a member' and navigate to login page
+	4) In login page, enter details. If success then navigate to home/index page. If unsuccessful then drop a 
+		message and stay in the same page(login).
+  -->
+</web-app>
