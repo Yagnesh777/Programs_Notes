@@ -74,3 +74,5 @@
 
 </body>
 </html>
+
+https://www.codemystery.com/javascript-form-validation-email-phone-number-name/
